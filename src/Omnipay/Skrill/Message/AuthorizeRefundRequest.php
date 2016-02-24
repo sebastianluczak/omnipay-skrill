@@ -1,7 +1,7 @@
 <?php
-namespace Omnipay\Skrill\Message;
+namespace League\Omnipay\Skrill\Message;
 
-use Omnipay\Common\Exception\InvalidRequestException;
+use League\Omnipay\Common\Exception\InvalidRequestException;
 
 /**
  * Skrill Authorize Refund Request

@@ -1,8 +1,8 @@
 <?php
-namespace Omnipay\Skrill\Message;
+namespace League\Omnipay\Skrill\Message;
 
-use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\RedirectResponseInterface;
+use League\Omnipay\Common\Message\AbstractResponse;
+use League\Omnipay\Common\Message\RedirectResponseInterface;
 
 /**
  * Skrill Payment Response

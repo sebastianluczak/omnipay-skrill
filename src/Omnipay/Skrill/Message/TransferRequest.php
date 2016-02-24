@@ -1,5 +1,5 @@
 <?php
-namespace Omnipay\Skrill\Message;
+namespace League\Omnipay\Skrill\Message;
 
 /**
  * Skrill Transfer Request

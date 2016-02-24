@@ -1,7 +1,8 @@
 <?php
-namespace Omnipay\Skrill;
+namespace League\Omnipay\Skrill;
 
-use Omnipay\Common\AbstractGateway;
+use League\Omnipay\Common\AbstractGateway;
+
 
 /**
  * Skrill Gateway
@@ -110,7 +111,7 @@ class Gateway extends AbstractGateway
      */
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('Omnipay\Skrill\Message\PaymentRequest', $parameters);
+        return $this->createRequest('League\Omnipay\Skrill\Message\PaymentRequest', $parameters);
     }
 
     /**
@@ -121,7 +122,7 @@ class Gateway extends AbstractGateway
      */
     public function authorizeTransfer(array $parameters = array())
     {
-        return $this->createRequest('Omnipay\Skrill\Message\AuthorizeTransferRequest', $parameters);
+        return $this->createRequest('League\Omnipay\Skrill\Message\AuthorizeTransferRequest', $parameters);
     }
 
     /**
@@ -132,7 +133,7 @@ class Gateway extends AbstractGateway
      */
     public function transfer(array $parameters = array())
     {
-        return $this->createRequest('Omnipay\Skrill\Message\TransferRequest', $parameters);
+        return $this->createRequest('League\Omnipay\Skrill\Message\TransferRequest', $parameters);
     }
 
     /**
@@ -143,6 +144,6 @@ class Gateway extends AbstractGateway
      */
     public function authorizeRefund(array $parameters = array())
     {
-        return $this->createRequest('Omnipay\Skrill\Message\AuthorizeRefundRequest', $parameters);
+        return $this->createRequest('League\Omnipay\Skrill\Message\AuthorizeRefundRequest', $parameters);
     }
 }

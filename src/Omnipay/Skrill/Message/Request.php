@@ -1,7 +1,7 @@
 <?php
-namespace Omnipay\Skrill\Message;
+namespace League\Omnipay\Skrill\Message;
 
-use Omnipay\Common\Message\AbstractRequest;
+use League\Omnipay\Common\Message\AbstractRequest;
 
 /**
  * Skrill Request
