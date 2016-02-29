@@ -1,5 +1,5 @@
 {
-    "name": "sebastianluczak/omnipay-skrill",
+    "name": "alfaproject/omnipay-skrill",
     "type": "library",
     "description": "Skrill driver for the Omnipay payment processing library",
     "keywords": [
@@ -10,7 +10,7 @@
         "pay",
         "payment"
     ],
-    "homepage": "https://github.com/sebastianluczak/omnipay-skrill",
+    "homepage": "https://github.com/alfaproject/omnipay-skrill",
     "license": "MIT",
     "authors": [
         {
@@ -21,6 +21,18 @@
     "autoload": {
         "psr-0": {
             "Omnipay\\Skrill\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
         }
     }
 }
