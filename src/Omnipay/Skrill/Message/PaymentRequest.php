@@ -824,7 +824,8 @@ class PaymentRequest extends AbstractRequest
         $data['country'] = $this->getCustomerCountry();
 
         // payment details
-        $data['amount'] = rtrim(rtrim($this->getAmount(), '0'), '.');
+        dump($this->getAmount());
+        $data['amount'] = rtrim(rtrim($this->getAmount()->getAmount(), '0'), '.');
         $data['currency'] = $this->getCurrency();
 
         $amountDescriptions = $this->getAmountDescriptions();
@@ -860,7 +861,9 @@ class PaymentRequest extends AbstractRequest
      */
     public function sendData($data)
     {
-        $httpResponse = $this->httpClient->post($this->getEndpoint(), null, $data)->send();
+        // change body to PSR7
+
+        $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), [], json_encode($data));
         return $this->response = new PaymentResponse($this, $httpResponse);
     }
 

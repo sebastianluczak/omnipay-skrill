@@ -28,9 +28,9 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'email'     => '',
-            'notifyUrl' => '',
-            'testMode'  => false,
+            'email'     => 'michal-facilitator@4-o-clock.pl',
+            'notifyUrl' => '/payments/done',
+            'testMode'  => true,
         );
     }
 

@@ -61,7 +61,10 @@ class PaymentResponse extends AbstractResponse implements RedirectResponseInterf
      */
     public function getSessionId()
     {
-        return preg_match('~SESSION_ID=([0-9a-fA-F]+)~', $this->data->getSetCookie(), $matches)
+        dump($this->data);
+        return null;
+
+        return preg_match('~SESSION_ID=([0-9a-fA-F]+)~', $this->data->getCookie(), $matches)
             ? $matches[1]
             : null;
     }
@@ -73,7 +76,7 @@ class PaymentResponse extends AbstractResponse implements RedirectResponseInterf
      */
     public function getStatus()
     {
-        return (string) $this->data->getHeader('X-Skrill-Status');
+        return (string) $this->data->getHeader('X-Skrill-Status')[0];
     }
 
     /**
@@ -85,16 +88,5 @@ class PaymentResponse extends AbstractResponse implements RedirectResponseInterf
     {
         $statusTokens = explode(':', $this->getStatus());
         return array_shift($statusTokens) ?: null;
-    }
-
-    /**
-     * Get the status message.
-     *
-     * @return string|null status message
-     */
-    public function getMessage()
-    {
-        $statusTokens = explode(':', $this->getStatus());
-        return array_pop($statusTokens) ?: null;
     }
 }
