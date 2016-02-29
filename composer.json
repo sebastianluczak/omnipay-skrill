@@ -22,8 +22,5 @@
         "psr-0": {
             "Omnipay\\Skrill\\": "src/"
         }
-    },
-    "require": {
-        "omnipay/common": "~3.0"
     }
 }
